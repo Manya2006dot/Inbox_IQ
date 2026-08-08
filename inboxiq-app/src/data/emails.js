@@ -1,0 +1,86 @@
+export const initialEmails = [
+  {
+    id: 1, sender: "Sarah Lin", org: "Meridian Corp", initials: "SL", time: "9:14 AM",
+    subject: "Contract renewal terms — response needed by 2 PM",
+    snippet: "Meridian is threatening to pause renewal talks unless revised terms go out today...",
+    priority: "high", unread: true, starred: true, flag: null,
+    ai: "Meridian is threatening to pause renewal talks unless revised terms are sent today. Replying now protects a renewal worth roughly one week of negotiation time.",
+    body: "Hi Rohan,\n\nFollowing up on our call. We need the revised terms in writing before end of day, or we will have to pause the renewal discussion until next quarter.\n\nCan you confirm a time this afternoon to align?\n\nBest,\nSarah",
+  },
+  {
+    id: 2, sender: "David Okafor", org: "Legal", initials: "DO", time: "8:02 AM",
+    subject: "Escalation: NDA clause dispute with vendor",
+    snippet: "Legal needs your sign-off before end of day to keep vendor onboarding on track...",
+    priority: "high", unread: true, starred: false, flag: null,
+    ai: "Legal is blocked on your sign-off. Vendor onboarding stalls this week if this sits unanswered.",
+    body: "Hi Rohan,\n\nThe vendor pushed back on clause 4.2. We need your decision by EOD to keep onboarding on schedule.\n\nThanks,\nDavid",
+  },
+  {
+    id: 3, sender: "Unusual Sign-in Alert", org: "security-verify-team.net", initials: "!", time: "7:58 AM",
+    subject: "URGENT: Your account will be suspended — verify now",
+    snippet: "Click here immediately to verify your account or it will be permanently disabled...",
+    priority: "high", unread: true, starred: false, flag: "danger",
+    ai: "This message shows classic phishing signals: urgency, a mismatched sender domain, and a generic verification link. InboxIQ recommends not clicking any links and reporting it.",
+    body: "Dear user,\n\nWe detected unusual activity. Verify your account within 24 hours using the link below or it will be suspended permanently.\n\n[verify-account-now.net]\n\nSecurity Team",
+  },
+  {
+    id: 4, sender: "Priya Menon", org: "Board Office", initials: "PM", time: "7:41 AM",
+    subject: "Q3 board deck — final review needed",
+    snippet: "Deck goes to the board tomorrow morning, two open comments need your call...",
+    priority: "high", unread: true, starred: true, flag: null,
+    ai: "Two open comments remain on the board deck. Unresolved, the board reviews the deck without your input tomorrow morning.",
+    body: "Hi Rohan,\n\nCould you resolve the two open comments on slides 8 and 14 before tonight? The deck locks for print tomorrow at 8 AM.\n\nPriya",
+  },
+  {
+    id: 5, sender: "Alex Chen", org: "Product", initials: "AC", time: "10:05 AM",
+    subject: "Feedback on the new onboarding flow?",
+    snippet: "Would love a thumbs up or down on the mockups before Wednesday review...",
+    priority: "medium", unread: true, starred: false, flag: null,
+    ai: "A quick reaction to the mockups unblocks Wednesday's design review, low effort and moderate impact.",
+    body: "Hey Rohan,\n\nMockups are attached. A quick thumbs up or down before Wednesday would really help us move forward.\n\nAlex",
+  },
+  {
+    id: 6, sender: "Meera Iyer", org: "Finance", initials: "MI", time: "9:52 AM",
+    subject: "Re: Budget reallocation for Q4",
+    snippet: "Finance needs confirmation on the $40K shift from marketing to hiring...",
+    priority: "medium", unread: false, starred: false, flag: null,
+    ai: "Finance is waiting on a yes or no for the Q4 reallocation. Not urgent today, but should close this week.",
+    body: "Hi Rohan,\n\nCan you confirm the $40K shift from marketing to hiring for Q4? We would like to lock the budget by Friday.\n\nMeera",
+  },
+  {
+    id: 7, sender: "Tom Reyes", org: "Partner Team", initials: "TR", time: "Yesterday",
+    subject: "Intro call availability next week?",
+    snippet: "Proposing three time slots for an introductory call with the partner team...",
+    priority: "medium", unread: false, starred: false, flag: null,
+    ai: "A scheduling reply is all that is needed here, no real deadline pressure.",
+    body: "Hi Rohan,\n\nWould any of these work for a 30-minute intro call next week: Tue 10 AM, Wed 2 PM, or Thu 4 PM?\n\nTom",
+  },
+  {
+    id: 8, sender: "BigSaver Deals", org: "promo@dealsblastnow.com", initials: "BD", time: "6:30 AM",
+    subject: "90% OFF everything — today only, click now!!!",
+    snippet: "Massive clearance sale, limited time offer, click to claim your discount...",
+    priority: "low", unread: true, starred: false, flag: "spam",
+    ai: "Bulk promotional email from an unfamiliar sender with high-pressure sale language. Safe to ignore or delete.",
+    body: "HUGE SALE! 90% off everything, today only! Click the link now before it is gone!",
+  },
+  {
+    id: 9, sender: "Slack Digest", org: "notifications", initials: "SD", time: "7:00 AM",
+    subject: "12 mentions across #product and #launch",
+    snippet: "Mostly celebratory threads about the launch, nothing needs your action...",
+    priority: "low", unread: false, starred: false, flag: null,
+    ai: "Informational digest only. No action needed.",
+    body: "You were mentioned 12 times this week, mostly in celebratory threads about the launch. No action needed.",
+  },
+  {
+    id: 10, sender: "The Information", org: "Daily Brief", initials: "TI", time: "6:00 AM",
+    subject: "Daily Brief: AI infrastructure spending cools",
+    snippet: "Industry roundup, no action needed, worth a skim over coffee...",
+    priority: "low", unread: false, starred: false, flag: null,
+    ai: "Newsletter digest. Tagged for optional reading, no action required.",
+    body: "Today's roundup covers AI infrastructure spending trends and three notable enterprise deals this week.",
+  },
+];
+
+export function priorityLabel(p) {
+  return p === "high" ? "Very important" : p === "medium" ? "Average" : "Not so important";
+}
